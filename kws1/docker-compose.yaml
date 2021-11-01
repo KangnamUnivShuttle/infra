@@ -4,6 +4,9 @@ networks:
   kwsnet:
     name: infra_kwsnet
     driver: bridge
+  minecraft:
+    name: infra_minecraft
+    driver: bridge
 
 services:
   web:
@@ -12,6 +15,7 @@ services:
     container_name: nginx-kwsnet-container
     networks:
       - kwsnet
+      - minecraft
     restart: always
     volumes:
         - ./certbot/conf:/etc/letsencrypt
