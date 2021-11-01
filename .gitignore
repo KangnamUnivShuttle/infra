@@ -121,7 +121,8 @@ dist
 .yarn/build-state.yml
 .yarn/install-state.gz
 .pnp.*
-
+certbot/
+well-known/
 ### Node Patch ###
 # Serverless Webpack directories
 .webpack/
