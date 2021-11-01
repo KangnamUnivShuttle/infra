@@ -14,6 +14,18 @@ sudo docker run hello-world
 ```
 
 - renew
+
 ```
-docker run --rm --name certbot -v './certbot/conf:/etc/letsencrypt' -v './certbot/logs:/var/log/letsencrypt' -v './certbot/data:/var/www/certbot' certbot/certbot renew --server https://acme-v02.api.letsencrypt.org/directory --cert-name kws1.gapmoe.net
+docker run --rm --name certbot -v './certbot/conf:/etc/letsencrypt' -v './certbot/logs:/var/log/letsencrypt' -v './certbot/data:/var/www/certbot' certbot/certbot:v1.20.0 renew --server https://acme-v02.api.letsencrypt.org/directory --cert-name kws1.gapmoe.net
+```
+
+```
+docker run -it --rm --name certbot -v './certbot/conf:/etc/letsencrypt' -v './certbot/logs:/var/log/letsencrypt' -v './certbot/data:/var/www/certbot' certbot/certbot:v1.20.0 certificates
+
+- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -   
+Found the following certs:     
+  Certificate Name: kws1.gapmoe.net
+.
+.
+.
 ```
