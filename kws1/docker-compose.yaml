@@ -14,7 +14,7 @@ services:
       - kwsnet
     restart: always
     volumes:
-        - ./certbot/conf:/etc/nginx/ssl
+        - ./certbot/conf:/etc/letsencrypt
         - ./certbot/data:/var/www/certbot
         - ./well-known:/usr/share/nginx/well-known
     ports:

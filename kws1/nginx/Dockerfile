@@ -3,7 +3,6 @@ FROM nginx:1.20.0
 RUN mkdir /usr/share/nginx/well-known
 
 RUN apt update
-RUN apt-get install letsencrypt -y
 RUN apt-get install vim htop tmux -y
 RUN apt-get install cron -y
 
