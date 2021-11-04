@@ -8,7 +8,7 @@
 
 계정 festival 를 이용하여 접속 후 `web` 디렉토리에 웹페이지 파일을 저장
 
-https://kws1.gapmoe.net/festival 에서 작업 결과 확인 가능
+https://kws1.kangnam.ac.kr/festival 에서 작업 결과 확인 가능
 
 FTP를 지원하지 않으므로 파일 전송시 `scp` 명령어를 사용하거나 Github 를 이용하여 `git clone` 하여 사용하는 방법을 이용하기 바람
 
