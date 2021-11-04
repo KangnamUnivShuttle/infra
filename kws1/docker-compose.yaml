@@ -21,6 +21,7 @@ services:
         - ./certbot/conf:/etc/letsencrypt
         - ./certbot/data:/var/www/certbot
         - ./well-known:/usr/share/nginx/well-known
+        - /home/festival/web:/usr/share/nginx/festival
     ports:
         - 80:80
         - 443:443
