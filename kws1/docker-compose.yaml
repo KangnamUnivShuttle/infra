@@ -33,3 +33,11 @@ services:
         - ./certbot/logs:/var/log/letsencrypt
         - ./certbot/data:/var/www/certbot
         - ./well-known:/var/www/well-known
+  certbot2:
+    image: certbot/certbot:v1.20.0
+    command: certonly --noninteractive --agree-tos -d kws1.kangnam.ac.kr --register-unsafely-without-email --webroot -w /var/www/well-known/
+    volumes:
+        - ./certbot/conf:/etc/letsencrypt
+        - ./certbot/logs:/var/log/letsencrypt
+        - ./certbot/data:/var/www/certbot
+        - ./well-known:/var/www/well-known
