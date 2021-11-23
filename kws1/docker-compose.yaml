@@ -19,7 +19,7 @@ services:
     networks:
       - kwsnet
       - minecraft
-      - infra_chatbot
+      - chatbot
     restart: always
     volumes:
         - ./certbot/conf:/etc/letsencrypt
