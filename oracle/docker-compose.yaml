@@ -2,7 +2,6 @@ version: "3.3"
 
 networks:
   oraclenet:
-    name: infra_oraclenet
     driver: bridge
 
 services:
