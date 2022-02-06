@@ -20,7 +20,7 @@ services:
         - 80:80
         - 443:443
   certbot:
-    image: certbot/certbot:v1.20.0
+    image: certbot/certbot:arm64v8-v1.22.0
     command: certonly --noninteractive --agree-tos -d oracle.gapmoe.net --register-unsafely-without-email --webroot -w /var/www/well-known/
     volumes:
         - ./certbot/conf:/etc/letsencrypt
