@@ -30,6 +30,20 @@ services:
     ports:
         - 80:80
         - 443:443
+  redis:
+    image: redis:6.2.6
+    container_name: redis-kwsnet-container
+    networks:
+      - infra_chatbot
+      - infra_kwsnet
+    restart: always
+    ports:
+      - "6379:6379"
+    logging:
+      driver: "json-file"
+      options:
+          max-file: "5"
+          max-size: "10m"
   certbot:
     image: certbot/certbot:v1.20.0
     command: certonly --noninteractive --agree-tos -d kws1.gapmoe.net --register-unsafely-without-email --webroot -w /var/www/well-known/
