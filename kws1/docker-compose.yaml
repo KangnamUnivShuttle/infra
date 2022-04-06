@@ -25,6 +25,7 @@ services:
         - ./certbot/conf:/etc/letsencrypt
         - ./certbot/data:/var/www/certbot
         - ./well-known:/usr/share/nginx/well-known
+        - /home/stories2/dist/dist:/usr/share/nginx/admin
         - /home/festival/web:/usr/share/nginx/festival
         - /home/stories2/KangnamShuttle4.0/codeserver/vscode2/config/workspace/God-Money/build/web:/usr/share/nginx/God-Money
     ports:
